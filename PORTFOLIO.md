@@ -39,6 +39,61 @@ Throughout development, we made several customizations:
    - Addressed component issues in the codebase
    - Fixed rendering issues with client components in Next.js 14
 
+## Deployment to Vercel
+
+The portfolio is deployed to Vercel at [https://savi-portfolio.vercel.app/](https://savi-portfolio.vercel.app/)
+
+### Deployment Steps
+
+1. **Create a Vercel account** (or sign in)
+   - Visit [vercel.com](https://vercel.com)
+   - Sign up/Sign in with your GitHub account for easiest integration
+
+2. **Import your GitHub repository**
+   - From the Vercel dashboard, click "Add New..."
+   - Select "Project"
+   - Choose "Import Git Repository"
+   - Select "saviii/savi-porfolio" from your GitHub repos
+   - If you don't see your repo, you might need to configure the Vercel GitHub integration
+
+3. **Configure project settings**
+   - Framework Preset: Next.js
+   - Root Directory: ./
+   - Build Command: Leave as default (typically `next build`)
+   - Output Directory: Leave as default (typically `.next`)
+   - Install Command: Use `npm install` (instead of pnpm)
+
+4. **Environment Variables**
+   - Add any required environment variables (none required for basic setup)
+
+5. **Deploy**
+   - Click "Deploy"
+   - Vercel will build and deploy your portfolio
+
+6. **Set Up Automatic Deployments**
+   - Vercel automatically sets up continuous deployment from your GitHub repo
+   - Any pushes to the main branch will trigger a new deployment
+
+7. **Custom Domain (Optional)**
+   - From your project dashboard on Vercel, go to "Domains"
+   - Add your custom domain (e.g., savisingh.com)
+   - Follow Vercel's instructions to set up DNS records with your domain provider
+
+### Troubleshooting Deployment
+
+If your deployment shows the default Next.js page instead of your portfolio:
+1. Verify the correct repository is connected to Vercel
+2. Check that your build settings are correct (particularly for Next.js 14)
+3. Review the build logs for any errors
+4. Ensure your `src/app/page.tsx` file is being correctly recognized
+
+To view build logs:
+1. Go to your project on the Vercel dashboard
+2. Click on the latest deployment
+3. Select "View Build Logs"
+
+If needed, trigger a manual redeployment from the Vercel dashboard.
+
 ## Git Setup and Workflow
 
 The portfolio was set up with Git version control and pushed to GitHub using the following steps:
@@ -114,11 +169,11 @@ There appears to be a reference to pnpm in the project, but it's not installed i
 ## Next Steps and Future Improvements
 
 Potential future enhancements:
-- Deploy the portfolio to a hosting service (Vercel, Netlify, etc.)
 - Implement blog functionality
 - Restore and update the education section
 - Add more interactive elements or animations
-- Set up continuous deployment from GitHub
+- Set up custom domain and SSL certificates
+- Add analytics to track portfolio visitors
 
 ## Troubleshooting
 
