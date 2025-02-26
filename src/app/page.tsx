@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { AnimatedSkillBadge } from "@/components/animated-skill-badge";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -104,11 +103,15 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex justify-center w-full py-4">
-            <BlurFade delay={BLUR_FADE_DELAY * 10}>
-              <AnimatedSkillBadge text={DATA.skills[0]} />
-            </BlurFade>
-          </div>
+          <BlurFade delay={BLUR_FADE_DELAY * 10}>
+            <div className="flex flex-wrap gap-2">
+              {DATA.skills.map((skill, id) => (
+                <Badge key={id} variant="secondary">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </BlurFade>
         </div>
       </section>
       <section id="projects">
