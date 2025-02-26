@@ -13,7 +13,16 @@ export const DATA = {
     "Product leader with 10+ years' experience driving digital consumer products end-to-end. Passionate about generative AI, prompt engineering, and conversational AI, with a track record of integrating AI-driven solutions to create intuitive, impactful experiences.",
   avatarUrl: "/me.png",
   skills: [
-    "Shipping Product"
+    "Shipping Product",
+    "SQL",
+    "Product Strategy",
+    "User Research",
+    "Prompt Creation",
+    "Jupyter",
+    "Figma",
+    "JIRA",
+    "Canva",
+    "Program Management"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
