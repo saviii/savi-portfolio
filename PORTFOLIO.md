@@ -53,7 +53,7 @@ The portfolio is deployed to Vercel at [https://savi-portfolio.vercel.app/](http
    - From the Vercel dashboard, click "Add New..."
    - Select "Project"
    - Choose "Import Git Repository"
-   - Select "saviii/savi-porfolio" from your GitHub repos
+   - Select "saviii/savi-portfolio" from your GitHub repos
    - If you don't see your repo, you might need to configure the Vercel GitHub integration
 
 3. **Configure project settings**
@@ -103,7 +103,7 @@ The portfolio was set up with Git version control and pushed to GitHub using the
 git init
 
 # Add GitHub repository as remote origin
-git remote add origin git@github.com:saviii/savi-porfolio.git
+git remote add origin git@github.com:saviii/savi-portfolio.git
 
 # Add all files to Git tracking
 git add .
