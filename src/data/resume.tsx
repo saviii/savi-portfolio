@@ -22,7 +22,9 @@ export const DATA = {
     "Figma",
     "JIRA",
     "Canva",
-    "Program Management"
+    "Program Management",
+    "Product Design",
+    "A/B Testing"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
