@@ -124,7 +124,7 @@ export default function Page() {
                   Highlighted Achievements
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Throughout my career, I've led innovative product initiatives that drive user engagement and business growth. Here are some of my notable contributions.
+                  Throughout my career, I&apos;ve led innovative product initiatives that drive user engagement and business growth. Here are some of my notable contributions.
                 </p>
               </div>
             </div>
