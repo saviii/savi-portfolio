@@ -89,7 +89,7 @@ export const DATA = {
       title: "Senior Product Manager",
       logoUrl: "/smartnews.png",
       start: "June 2022",
-      end: "Present",
+      end: "November 2024",
       description:
         "Initiated and led the integration of a Gen AI-powered ranking system in SmartNews, significantly improving article relevance and boosting Day 7 retention by 7%. Developed product vision and roadmap to overhaul the push notification system, resulting in an 8% increase in revenue. Developed and productionized advanced AI prompts for content scoring, leveraging generative models to evaluate each article on key attributes to inform ranking decisions. Led a cross-functional team of 20+ engineers, designers, and data scientists to build, launch, and manage SmartNews 2.0."
     },
