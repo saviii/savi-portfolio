@@ -62,6 +62,7 @@ The portfolio is deployed to Vercel at [https://savi-portfolio.vercel.app/](http
    - Build Command: Leave as default (typically `next build`)
    - Output Directory: Leave as default (typically `.next`)
    - Install Command: Use `npm install` (instead of pnpm)
+   - **Important**: In the Build & Development Settings, set Package Manager to "npm"
 
 4. **Environment Variables**
    - Add any required environment variables (none required for basic setup)
@@ -86,6 +87,11 @@ If your deployment shows the default Next.js page instead of your portfolio:
 2. Check that your build settings are correct (particularly for Next.js 14)
 3. Review the build logs for any errors
 4. Ensure your `src/app/page.tsx` file is being correctly recognized
+
+If you encounter package manager errors:
+1. Make sure the package manager in Vercel settings is set to "npm" (not "pnpm")
+2. If using npm locally, avoid pushing pnpm-lock.yaml changes
+3. Consider deleting pnpm-lock.yaml if it's causing consistent issues
 
 To view build logs:
 1. Go to your project on the Vercel dashboard
@@ -165,6 +171,8 @@ There appears to be a reference to pnpm in the project, but it's not installed i
 
 1. Continue using npm without any changes
 2. Install pnpm globally if needed: `npm install -g pnpm`
+
+Note that if you're deploying to Vercel, make sure to set the package manager to "npm" in your project settings to avoid build errors related to pnpm.
 
 ## Next Steps and Future Improvements
 
