@@ -84,19 +84,62 @@ export function SocialLink({
     }
     // For LinkedIn
     else if (platform.toLowerCase() === "linkedin") {
-      // Use iframe technique for LinkedIn too, with the standard URL
-      const appIntent = document.createElement('iframe');
-      appIntent.style.display = 'none';
-      document.body.appendChild(appIntent);
+      // Try multiple approaches for LinkedIn
       
-      // Use the normal URL which has app association
-      appIntent.src = href;
+      // 1. Try direct LinkedIn app URI schemes (both iOS and Android formats)
+      const androidScheme = `linkedin://profile/${username}`;
+      const iosScheme = `linkedin://profile/${username}`;
       
-      // Remove the iframe after attempt
-      setTimeout(() => {
-        document.body.removeChild(appIntent);
-      }, 100);
+      // For iOS
+      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        // Create a link element to trigger the app opening
+        const appLink = document.createElement('a');
+        appLink.href = iosScheme;
+        appLink.style.display = 'none';
+        document.body.appendChild(appLink);
+        appLink.click();
+        
+        // Clean up
+        setTimeout(() => {
+          document.body.removeChild(appLink);
+        }, 100);
+      } 
+      // For Android
+      else if (/Android/i.test(navigator.userAgent)) {
+        // Create an intent for Android
+        window.location.href = androidScheme;
+        
+        // After a short delay, revert any navigation change
+        setTimeout(() => {
+          // This will execute only if the app didn't open
+          if (document.hidden) {
+            // App opened, don't redirect
+            return;
+          }
+          
+          // Open in browser as fallback
+          window.open(href, "_blank", "noopener,noreferrer");
+        }, 500);
+      }
+      // For other mobile browsers
+      else {
+        // Just try both schemes and see if one works
+        const appLink = document.createElement('a');
+        appLink.href = iosScheme;
+        appLink.style.display = 'none';
+        document.body.appendChild(appLink);
+        appLink.click();
+        
+        // Clean up
+        setTimeout(() => {
+          document.body.removeChild(appLink);
+          
+          // Also try opening in new tab as fallback
+          window.open(href, "_blank", "noopener,noreferrer");
+        }, 500);
+      }
       
+      // Call onClick handler if provided
       onClick?.();
     }
     // For other platforms
