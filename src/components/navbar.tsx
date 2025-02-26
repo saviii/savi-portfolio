@@ -10,6 +10,7 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { SocialLink } from "./social-link";
 
 export default function Navbar() {
   return (
@@ -39,26 +40,40 @@ export default function Navbar() {
         <Separator orientation="vertical" className="h-full" />
         {Object.entries(DATA.contact.social)
           .filter(([_, social]) => social.navbar)
-          .map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
-                    )}
-                  >
-                    <social.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
+          .map(([name, social]) => {
+            // Extract username from URL for deep linking
+            let username = "";
+            if (name === "X") {
+              username = social.url.split("SaviPabla")[0].split("/").pop() || "SaviPabla";
+            } else if (name === "LinkedIn") {
+              username = social.url.split("saviii")[0].split("/").pop() || "saviii";
+            } else if (name === "GitHub") {
+              username = social.url.split("saviii")[0].split("/").pop() || "saviii";
+            }
+            
+            return (
+              <DockIcon key={name}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <SocialLink
+                      href={social.url}
+                      platform={name}
+                      username={username}
+                      className={cn(
+                        buttonVariants({ variant: "ghost", size: "icon" }),
+                        "size-12"
+                      )}
+                    >
+                      <social.icon className="size-4" />
+                    </SocialLink>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </DockIcon>
+            );
+          })}
         <Separator orientation="vertical" className="h-full py-2" />
         <DockIcon>
           <Tooltip>

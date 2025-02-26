@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { SocialLink } from "@/components/social-link";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -210,19 +211,23 @@ export default function Page() {
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to connect? Shoot me a message on{" "}
-                <Link
+                <SocialLink
                   href="https://x.com/SaviPabla"
+                  platform="x"
+                  username="SaviPabla"
                   className="text-blue-500 hover:underline"
                 >
                   Twitter
-                </Link>{" "}
+                </SocialLink>{" "}
                 or{" "}
-                <Link
+                <SocialLink
                   href="https://www.linkedin.com/in/saviii/"
+                  platform="linkedin"
+                  username="saviii"
                   className="text-blue-500 hover:underline"
                 >
                   LinkedIn
-                </Link>{" "}
+                </SocialLink>{" "}
                 and I&apos;ll respond whenever I can.
               </p>
             </div>
