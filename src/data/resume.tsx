@@ -174,6 +174,54 @@ export const DATA = {
       video: "",
     },
     {
+      title: "Content Understanding System",
+      href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
+      dates: "2023 - 2024",
+      active: true,
+      description:
+        "Developed an AI-powered content understanding system that analyzes news stories for characteristics like sensationalism, clickbait, violence, and quality. This sophisticated analysis directly informed content ranking algorithms, enhancing overall news quality for users.",
+      technologies: [
+        "AI/ML",
+        "Content Analysis",
+        "Natural Language Processing",
+        "Product Management",
+        "Data Science",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Publisher Scoring Framework",
+      href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
+      dates: "2023 - 2024",
+      active: true,
+      description:
+        "Designed and implemented a comprehensive publisher scoring system that evaluates news sources based on their content quality. This framework plays a crucial role in the article ranking algorithm, ensuring users receive content from reliable, high-quality publishers.",
+      technologies: [
+        "Data Analytics",
+        "Publisher Relations",
+        "Quality Metrics",
+        "Algorithm Design",
+        "Content Strategy",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
       title: "Push Notification System",
       href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
       dates: "2022 - 2023",
