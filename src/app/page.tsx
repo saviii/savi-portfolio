@@ -20,7 +20,7 @@ export default function Page() {
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Hi, I'm {DATA.name.split(" ")[0]} 👋
+                  Hi, I&apos;m {DATA.name.split(" ")[0]} 👋
                 </h1>
               </BlurFade>
               <BlurFadeText
