@@ -18,12 +18,12 @@ export function ModeToggle() {
       variant="ghost"
       type="button"
       size="icon"
-      className="px-2"
+      className="px-2 relative"
       onClick={cycleTheme}
     >
-      <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 data-[state=system]:rotate-90 data-[state=system]:scale-0" data-state={theme === 'system' ? 'system' : ''} />
-      <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 data-[state=system]:rotate-90 data-[state=system]:scale-0" data-state={theme === 'system' ? 'system' : ''} />
-      <DesktopIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all data-[state=system]:rotate-0 data-[state=system]:scale-100" data-state={theme === 'system' ? 'system' : ''} />
+      {theme === 'light' && <SunIcon className="h-[1.2rem] w-[1.2rem]" />}
+      {theme === 'dark' && <MoonIcon className="h-[1.2rem] w-[1.2rem]" />}
+      {theme === 'system' && <DesktopIcon className="h-[1.2rem] w-[1.2rem]" />}
     </Button>
   );
 }
