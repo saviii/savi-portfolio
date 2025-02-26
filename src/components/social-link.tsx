@@ -50,39 +50,51 @@ export function SocialLink({
 
   // Handle click to attempt opening native app
   const handleClick = (e: React.MouseEvent) => {
+    // Prevent default behavior for all links to avoid browser navigation
+    e.preventDefault();
+
+    // If not on mobile or no username provided, just call the onClick handler
     if (!isMobile || !username) {
+      // For non-mobile, we'll manually handle navigation to maintain consistent behavior
+      window.open(href, "_blank", "noopener,noreferrer");
       onClick?.();
       return;
     }
 
-    // Prevent default behavior
-    e.preventDefault();
-
     // For Twitter/X
     if (platform.toLowerCase() === "x" || platform.toLowerCase() === "twitter") {
-      // First try the twitter:// scheme
+      // Try the twitter:// scheme
       const twitterScheme = `twitter://user?screen_name=${username}`;
-      const webFallback = `https://x.com/${username}`;
       
-      window.location.href = twitterScheme;
+      // Create a hidden iframe to attempt opening the app without changing page
+      const appIntent = document.createElement('iframe');
+      appIntent.style.display = 'none';
+      document.body.appendChild(appIntent);
       
-      // Fallback to web after short timeout (will execute if app wasn't opened)
+      // App opening attempt
+      appIntent.src = twitterScheme;
+      
+      // Remove the iframe after attempt
       setTimeout(() => {
-        window.location.href = webFallback;
-      }, 500);
+        document.body.removeChild(appIntent);
+      }, 100);
+      
+      // Call onClick handler if provided
+      onClick?.();
     }
     // For LinkedIn
     else if (platform.toLowerCase() === "linkedin") {
-      // LinkedIn app handles regular URLs through app association
-      window.location.href = href;
+      // Try to open LinkedIn app via normal URL (app association)
+      // Use window.open instead of location.href to avoid changing the current page
+      window.open(href, "_blank", "noopener,noreferrer");
+      onClick?.();
     }
-    // For other platforms, just open the regular URL
+    // For other platforms
     else {
-      window.location.href = href;
+      // Just open in new tab for other platforms
+      window.open(href, "_blank", "noopener,noreferrer");
+      onClick?.();
     }
-
-    // Call the onClick handler if provided
-    onClick?.();
   };
 
   return (
