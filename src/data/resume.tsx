@@ -81,8 +81,8 @@ export const DATA = {
       location: "San Francisco, CA",
       title: "Senior Product Manager",
       logoUrl: "/smartnews.png",
-      start: "June 2022",
-      end: "November 2024",
+      start: "Jun 2022",
+      end: "Nov 2024",
       description:
         "Initiated and led the integration of a Gen AI-powered ranking system in SmartNews, significantly improving article relevance and boosting Day 7 retention by 7%. Developed product vision and roadmap to overhaul the push notification system, resulting in an 8% increase in revenue. Developed and productionized advanced AI prompts for content scoring, leveraging generative models to evaluate each article on key attributes to inform ranking decisions. Led a cross-functional team of 20+ engineers, designers, and data scientists to build, launch, and manage SmartNews 2.0."
     },
@@ -93,8 +93,8 @@ export const DATA = {
       location: "San Francisco, CA",
       title: "Product Manager, Mobile Apps",
       logoUrl: "/medium.png",
-      start: "July 2019",
-      end: "March 2022",
+      start: "Jul 2019",
+      end: "Mar 2022",
       description:
         "Led the comprehensive redesign of the Medium Mobile app on iOS and Android, collaborating closely with design, engineering, and marketing teams to enhance the user interface and experience from the ground up. Developed and executed the GTM strategy for the launch of an improved response experience across mobile and web platforms, leading to a 12% increase in user comments and significantly boosting community engagement and participation."
     },
@@ -105,8 +105,8 @@ export const DATA = {
       location: "Palo Alto, CA",
       title: "Product Manager",
       logoUrl: "/evie.png",
-      start: "November 2016",
-      end: "July 2019",
+      start: "Nov 2016",
+      end: "Jul 2019",
       description:
         "Managed the #1 rated Android Launcher, Evie, scaling DAUs from 30k to 400k."
     },
@@ -117,8 +117,8 @@ export const DATA = {
       location: "Los Angeles, CA",
       title: "Senior QA Engineer",
       logoUrl: "/directv.png",
-      start: "June 2013",
-      end: "October 2016",
+      start: "Jun 2013",
+      end: "Oct 2016",
       description:
         "Led QA team of 8 engineers on key projects like NFL Sunday Ticket and March Madness."
     },
