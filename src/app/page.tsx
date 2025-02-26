@@ -26,7 +26,7 @@ export default function Page() {
               <BlurFadeText
                 className="max-w-[600px] text-muted-foreground md:text-lg italic"
                 delay={BLUR_FADE_DELAY * 1.5}
-                text="Embracing the unknown: A PM on a quest to build, learn, and discover the magic in tech and life (with a few dog walks along the way)."
+                text="On a quest to build, learn, and discover the magic in tech and life (with a few dog walks and snacks along the way)."
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>

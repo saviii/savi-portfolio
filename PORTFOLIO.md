@@ -32,7 +32,7 @@ Throughout development, we made several customizations:
 3. **Text Content**
    - Updated the contact section text to: "Want to connect? Shoot me a message on Twitter or LinkedIn and I'll respond whenever I can."
    - Modified job title at Yahoo Finance from "Principal Product Manager" to "Senior Product Manager"
-   - Added a personal tagline: "Embracing the unknown: A PM on a quest to build, learn, and discover the magic in tech and life (with a few dog walks along the way)."
+   - Added a personal tagline: "On a quest to build, learn, and discover the magic in tech and life (with a few dog walks and snacks along the way)."
    - Removed the professional description from the hero section to create a more personal introduction
 
 4. **Technical Improvements**
