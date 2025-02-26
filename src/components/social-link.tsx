@@ -84,9 +84,19 @@ export function SocialLink({
     }
     // For LinkedIn
     else if (platform.toLowerCase() === "linkedin") {
-      // Try to open LinkedIn app via normal URL (app association)
-      // Use window.open instead of location.href to avoid changing the current page
-      window.open(href, "_blank", "noopener,noreferrer");
+      // Use iframe technique for LinkedIn too, with the standard URL
+      const appIntent = document.createElement('iframe');
+      appIntent.style.display = 'none';
+      document.body.appendChild(appIntent);
+      
+      // Use the normal URL which has app association
+      appIntent.src = href;
+      
+      // Remove the iframe after attempt
+      setTimeout(() => {
+        document.body.removeChild(appIntent);
+      }, 100);
+      
       onClick?.();
     }
     // For other platforms
