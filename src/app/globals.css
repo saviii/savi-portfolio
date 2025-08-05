@@ -152,4 +152,8 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   body {
     @apply bg-background text-foreground;
     }
+
+  .prose ul {
+    @apply list-disc pl-4;
+  }
 }

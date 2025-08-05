@@ -1,3 +1,6 @@
+import { ChatProvider } from "@/components/chat-provider";
+import { MainContent } from "@/components/main-content";
+import { ChatPanel } from "@/components/chat-panel";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -73,10 +76,13 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
-          </TooltipProvider>
+          <ChatProvider>
+            <TooltipProvider delayDuration={0}>
+              <MainContent>{children}</MainContent>
+              <Navbar />
+              <ChatPanel />
+            </TooltipProvider>
+          </ChatProvider>
         </ThemeProvider>
       </body>
     </html>

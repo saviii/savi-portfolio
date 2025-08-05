@@ -71,8 +71,12 @@ export const DATA = {
       logoUrl: "/yahoo.png",
       start: "Dec 2024",
       end: "Present",
-      description:
-        "Leading the Core Product Platform team to build and maintain foundational services used across multiple Yahoo Finance products, improving system reliability and scalability. Directing efforts to build out taxonomy and follow signals in Yahoo Finance."
+      description: `
+* Driving core platform initiatives including taxonomy, entity recognition, and follow systems to improve personalization and engagement. 
+* Creating AI-driven user experiences that simplify complex financial news and portfolio data using large language models and semantic understanding. 
+* Launched Yahoo Finance’s highest-performing newsletter (Breaking News Alerts) and increased Daily Movers open rates by 46% by leading end-to-end development of both products. 
+* Shipped foundational components for newsletter and design systems used across Yahoo Finance surfaces.
+`,
     },
     {
       company: "SmartNews",
@@ -83,8 +87,12 @@ export const DATA = {
       logoUrl: "/smartnews.png",
       start: "Jun 2022",
       end: "Nov 2024",
-      description:
-        "Initiated and led the integration of a Gen AI-powered ranking system in SmartNews, significantly improving article relevance and boosting Day 7 retention by 7%. Developed product vision and roadmap to overhaul the push notification system, resulting in an 8% increase in revenue. Developed and productionized advanced AI prompts for content scoring, leveraging generative models to evaluate each article on key attributes to inform ranking decisions. Led a cross-functional team of 20+ engineers, designers, and data scientists to build, launch, and manage SmartNews 2.0."
+      description: `
+* Launched GenAI-powered ranking system, boosting article relevance and Day 7 retention by 7%.
+* Overhauled the push notification system, resulting in an 8% lift in revenue.
+* Shipped LLM-powered scoring system to improve content ranking and personalization.
+* Led GenAI integration into the ranking system to enhance content quality and engagement.
+`,
     },
     {
       company: "Medium",
@@ -95,8 +103,10 @@ export const DATA = {
       logoUrl: "/medium.png",
       start: "Jul 2019",
       end: "Mar 2022",
-      description:
-        "Led the comprehensive redesign of the Medium Mobile app on iOS and Android, collaborating closely with design, engineering, and marketing teams to enhance the user interface and experience from the ground up. Developed and executed the GTM strategy for the launch of an improved response experience across mobile and web platforms, leading to a 12% increase in user comments and significantly boosting community engagement and participation."
+      description: `
+* Led the comprehensive redesign of the Medium Mobile app on iOS and Android, collaborating closely with design, engineering, and marketing teams to enhance the user interface and experience from the ground up.
+* Developed and executed the GTM strategy for the launch of an improved response experience across mobile and web platforms, leading to a 12% increase in user comments and significantly boosting community engagement and participation.
+`,
     },
     {
       company: "Evie Labs (acquired by Medium)",
@@ -144,7 +154,7 @@ export const DATA = {
   projects: [
     {
       title: "AI-Powered Ranking System",
-      href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
+      href: "https://www.smartnews.com/",
       dates: "2022 - 2023",
       active: true,
       description:
@@ -159,7 +169,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
+          href: "https://www.smartnews.com/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -168,7 +178,7 @@ export const DATA = {
     },
     {
       title: "Content Understanding System",
-      href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
+      href: "https://www.smartnews.com/",
       dates: "2023 - 2024",
       active: true,
       description:
@@ -183,7 +193,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
+          href: "https://www.smartnews.com/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -191,53 +201,52 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Publisher Scoring Framework",
-      href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
-      dates: "2023 - 2024",
+      title: "Breaking News Alerts",
+      href: "https://finance.yahoo.com/",
+      dates: "2024 - Present",
       active: true,
       description:
-        "Designed and implemented a comprehensive publisher scoring system that evaluates news sources based on their content quality. This framework plays a crucial role in the article ranking algorithm, ensuring users receive content from reliable, high-quality publishers.",
+        "Launched Yahoo Finance's highest-performing newsletter and increased Daily Movers open rates by 46% by leading end-to-end development of both products.",
       technologies: [
-        "Data Analytics",
-        "Publisher Relations",
-        "Quality Metrics",
-        "Algorithm Design",
-        "Content Strategy",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-    {
-      title: "Push Notification System",
-      href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
-      dates: "2022 - 2023",
-      active: true,
-      description:
-        "Developed product vision and roadmap to overhaul the push notification system, resulting in an 8% increase in revenue through improved user engagement.",
-      technologies: [
-        "Product Strategy",
-        "Notification Systems",
+        "Product Management",
+        "Email Marketing",
+        "A/B Testing",
         "User Engagement",
-        "Data Analytics",
-        "Personalization",
       ],
       links: [
         {
           type: "Website",
-          href: "https://techcrunch.com/2021/09/15/news-aggregator-smartnews-raises-230-million-valuing-its-business-at-2-billion/",
+          href: "https://finance.yahoo.com/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
       video: "",
     },
+    {
+      title: "Foundational Components",
+      href: "https://finance.yahoo.com/",
+      dates: "2024 - Present",
+      active: true,
+      description:
+        "Shipped foundational components for newsletter and design systems used across Yahoo Finance surfaces.",
+      technologies: [
+        "Product Management",
+        "Design Systems",
+        "Platform Strategy",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://finance.yahoo.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+
+
     {
       title: "Threaded Responses at Medium",
       href: "https://blog.medium.com/take-conversations-deeper-with-threaded-responses-1d1ec6e475e3",
